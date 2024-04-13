@@ -25,7 +25,7 @@
 <script src="./dist/js/demo-theme.min.js"></script>
 <div class="page">
     <!-- Navbar -->
-    <header class="navbar navbar-expand-md d-print-none">
+    <header class="navbar navbar-expand-md bg-primary d-print-none" data-bs-theme="dark">
         <div class="container-xl">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu"
                     aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -183,7 +183,9 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
                        aria-label="Open user menu">
-                        <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                        <span class="avatar avatar-sm rounded-circle">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+                        </span>
                         <div class="d-none d-xl-block ps-2">
                             <div>Guillermo Torres</div>
                             <div class="mt-1 small text-secondary">Administrador</div>
@@ -245,6 +247,24 @@
                     </span>
                                 <span class="nav-link-title">
                       Documentos
+                    </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./form-elements.html">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                           class="icon icon-tabler icons-tabler-outline icon-tabler-exchange"><path stroke="none"
+                                                                                                    d="M0 0h24v24H0z"
+                                                                                                    fill="none"/><path
+                              d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path
+                              d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path
+                              d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"/><path
+                              d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"/></svg>
+                    </span>
+                                <span class="nav-link-title">
+                      Automatizaciones
                     </span>
                             </a>
                         </li>
@@ -319,20 +339,23 @@
                                         <div class="row align-items-center">
                                             <div class="col-auto">
                             <span class="bg-primary text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                   stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"
-                                                                                        fill="none"></path><path
-                                      d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2"></path><path
-                                      d="M12 3v3m0 12v3"></path></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                           class="icon icon-tabler icons-tabler-outline icon-tabler-exchange"><path stroke="none"
+                                                                                                    d="M0 0h24v24H0z"
+                                                                                                    fill="none"/><path
+                              d="M5 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path
+                              d="M19 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path
+                              d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3"/><path
+                              d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3"/></svg>
                             </span>
                                             </div>
                                             <div class="col">
                                                 <div class="font-weight-medium">
-                                                    132 Sales
+                                                    132 Tr&aacute;mites
                                                 </div>
                                                 <div class="text-secondary">
-                                                    12 waiting payments
+                                                    12 en proceso de ejecuci&oacute;n
                                                 </div>
                                             </div>
                                         </div>
@@ -345,21 +368,22 @@
                                         <div class="row align-items-center">
                                             <div class="col-auto">
                             <span class="bg-green text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/shopping-cart -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                   stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"
-                                                                                        fill="none"></path><path
-                                      d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
-                                      d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path
-                                      d="M17 17h-11v-14h-2"></path><path d="M6 5l14 1l-1 7h-13"></path></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                           class="icon icon-tabler icons-tabler-outline icon-tabler-file-text"><path stroke="none"
+                                                                                                     d="M0 0h24v24H0z"
+                                                                                                     fill="none"/><path
+                              d="M14 3v4a1 1 0 0 0 1 1h4"/><path
+                              d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/><path
+                              d="M9 9l1 0"/><path d="M9 13l6 0"/><path d="M9 17l6 0"/></svg>
                             </span>
                                             </div>
                                             <div class="col">
                                                 <div class="font-weight-medium">
-                                                    78 Orders
+                                                    78 Documentos
                                                 </div>
                                                 <div class="text-secondary">
-                                                    32 shipped
+                                                    32 pendientes de aprobaci&oacute;n
                                                 </div>
                                             </div>
                                         </div>
@@ -372,19 +396,22 @@
                                         <div class="row align-items-center">
                                             <div class="col-auto">
                             <span class="bg-twitter text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                   stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"
-                                                                                        fill="none"></path><path
-                                      d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                           class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none"
+                                                                                                 d="M0 0h24v24H0z"
+                                                                                                 fill="none"/><path
+                              d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path
+                              d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path
+                              d="M21 21v-2a4 4 0 0 0 -3 -3.85"/></svg>
                             </span>
                                             </div>
                                             <div class="col">
                                                 <div class="font-weight-medium">
-                                                    623 Shares
+                                                    623 Usuarios
                                                 </div>
                                                 <div class="text-secondary">
-                                                    16 today
+                                                    16 pendientes de activaci&oacute;n
                                                 </div>
                                             </div>
                                         </div>
