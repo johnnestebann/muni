@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Documentos</title>
+    <title>Usuarios</title>
     <link rel="icon" type="image/x-icon" href="./dist/img/favicon.ico">
     <!-- CSS files -->
     <link href="./dist/css/tabler.min.css" rel="stylesheet"/>
@@ -120,21 +120,21 @@
                                     d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/></svg>
                         </span>
                         <div class="d-none d-xl-block ps-2">
-                            <div>Guillermo Torres</div>
-                            <div class="mt-1 small text-secondary">Administrador</div>
+                            <div><%= user.name %></div>
+                            <div class="mt-1 small text-secondary"><%= user.email %></div>
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                         <a href="./perfil.html" class="dropdown-item">Perfil</a>
-                        <a href="./index.html" class="dropdown-item">Salir</a>
+                        <a href="/logout" class="dropdown-item">Salir</a>
                     </div>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./inicio.html">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/inicio">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -149,7 +149,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./tramites.html">
+                            <a class="nav-link" href="/tramites">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -165,7 +165,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./documentos.html">
+                            <a class="nav-link" href="/documentos">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -182,7 +182,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./automatizaciones.html">
+                            <a class="nav-link" href="/automatizaciones">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -199,8 +199,8 @@
                     </span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./usuarios.html">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/usuarios">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/mail-opened -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -218,7 +218,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./configuracion.html">
+                            <a class="nav-link" href="/configuracion">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/mail-opened -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -250,8 +250,26 @@
                             Secci&oacute;n
                         </div>
                         <h2 class="page-title">
-                            Documentos
+                            Usuarios
                         </h2>
+                    </div>
+
+                    <div class="col-auto ms-auto d-print-none">
+                        <div class="d-flex">
+                            <input type="search" class="form-control d-inline-block w-9 me-3"
+                                   placeholder="Buscar usuario…"/>
+                            <a href="#" class="btn btn-primary">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 5l0 14"/>
+                                    <path d="M5 12l14 0"/>
+                                </svg>
+                                Nuevo usuario
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,8 +278,40 @@
         <!-- Page body -->
         <div class="page-body">
             <div class="container-xl">
-                <div class="row row-deck row-cards">
-
+                <div class="row row-cards">
+                    <!-- User cards will be dynamically populated later -->
+                </div>
+                <div class="d-flex mt-4">
+                    <ul class="pagination ms-auto">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M15 6l-6 6l6 6"/>
+                                </svg>
+                                ant.
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                sig. <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                     stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 6l6 6l-6 6"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -272,7 +322,7 @@
                     <div class="col-lg-auto ms-lg-auto">
                         <ul class="list-inline list-inline-dots mb-0">
                             <li class="list-inline-item">
-                               Dirigido por Guillermo Torres - 2024
+                                Dirigido por Guillermo Torres - 2024
                             </li>
                         </ul>
                     </div>

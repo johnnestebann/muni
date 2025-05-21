@@ -120,21 +120,21 @@
                                     d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/></svg>
                         </span>
                         <div class="d-none d-xl-block ps-2">
-                            <div>Guillermo Torres</div>
-                            <div class="mt-1 small text-secondary">Administrador</div>
+                            <div><%= user.name %></div>
+                            <div class="mt-1 small text-secondary"><%= user.email %></div>
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                        <a href="./perfil.html" class="dropdown-item">Perfil</a>
-                        <a href="./index.html" class="dropdown-item">Salir</a>
+                        <a href="/perfil" class="dropdown-item">Perfil</a>
+                        <a href="/logout" class="dropdown-item">Salir</a>
                     </div>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./inicio.html">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/inicio">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -149,7 +149,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./tramites.html">
+                            <a class="nav-link" href="/tramites">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -165,7 +165,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./documentos.html">
+                            <a class="nav-link" href="/documentos">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -182,7 +182,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./automatizaciones.html">
+                            <a class="nav-link" href="/automatizaciones">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -200,7 +200,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./usuarios.html">
+                            <a class="nav-link" href="/usuarios">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/mail-opened -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -218,7 +218,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="./configuracion.html">
+                            <a class="nav-link" href="/configuracion">
                     <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/mail-opened -->
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -278,20 +278,25 @@
                         <div class="col-12 col-md-9 d-flex flex-column">
                             <div class="card-body">
                                 <h2 class="mb-4">Mi Cuenta</h2>
+                                <h3 class="card-title mt-4">Perfil de Usuario</h3>
+                                <p>Nombre: <%= user.name %></p>
+                                <p>Email: <%= user.email %></p>
+
+                                <!-- Existing content below, can be removed or adjusted later -->
                                 <h3 class="card-title mt-4">Detalles del Perfil</h3>
                                 <div class="row g-3">
                                     <div class="col-md">
                                         <div class="form-label">Nombre completo</div>
-                                        <input type="text" class="form-control" value="Tabler">
+                                        <input type="text" class="form-control" value="<%= user.name %>">
                                     </div>
                                     <div class="col-md">
                                         <div class="form-label">Identificador</div>
-                                        <input type="text" class="form-control" value="560afc32">
+                                        <input type="text" class="form-control" value="USER-ID-PLACEHOLDER"> <!-- Placeholder for user ID -->
                                     </div>
                                     <div class="col-md">
                                         <div class="form-label">Direcci&oacute;n</div>
                                         <input type="text" class="form-control"
-                                               value="Peimei, China">
+                                               value="Dirección Placeholder"> <!-- Placeholder for address -->
                                     </div>
                                 </div>
                                 <h3 class="card-title mt-4">Email</h3>
@@ -300,7 +305,7 @@
                                     <div class="row g-2">
                                         <div class="col-auto">
                                             <input type="text" class="form-control w-auto"
-                                                   value="paweluna@howstuffworks.com">
+                                                   value="<%= user.email %>" readonly>
                                         </div>
                                         <div class="col-auto"><a href="#" class="btn">
                                             Cambiar
